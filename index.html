@@ -95,6 +95,17 @@
         </div>
     </div>
     <script>
+        var props = {
+            clientID: '9bad8949906955fe8545',
+            clientSecret: '042280ae9f3934c9ae1757b904f873811404df91',
+            repo: 'GoSCU-Talk',
+            owner: 'KevinYuHere',
+            admin: ['KevinYuHere'],
+            distractionFreeMode: false,
+            id: decodeURI(window.location.pathname),
+        }
+        let gitalk = new Gitalk(props);
+        gitalk.render('gitalk-container')
         function reSetProgress() {
             let totalHeight =
                 parseFloat(
@@ -217,16 +228,7 @@
                             right = 0;
                         }
                         document.getElementById("year").innerHTML = year.toString();
-                        const gitalk = new Gitalk({
-                            clientID: '9bad8949906955fe8545',
-                            clientSecret: '042280ae9f3934c9ae1757b904f873811404df91',
-                            repo: 'GoSCU-Talk',
-                            owner: 'KevinYuHere',
-                            admin: ['KevinYuHere'],
-                            distractionFreeMode: false,
-                            id: decodeURI(window.location.pathname),
-                        })
-                        gitalk.render('gitalk-container')
+                        props.id = decodeURI(window.location.pathname);
                         setTimeout(function () {
                             reSetProgress();
                         }, 500);
