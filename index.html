@@ -13,8 +13,9 @@
 </head>
 
 <body>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <div style="height:100%;width:100%;position:fixed;z-index:-9999"></div>
-   <!-- <style>
+    <!-- <style>
         @media (prefers-color-scheme: dark) {
             section.cover.show {
                 background: #0d1116 !important;
@@ -117,7 +118,7 @@
         var right = 0;
         var date = new Date;
         var year = date.getFullYear();
-        var props = {
+        var gitalk = new Gitalk({
             clientID: '9bad8949906955fe8545',
             clientSecret: '042280ae9f3934c9ae1757b904f873811404df91',
             repo: 'GoSCU-Talk',
@@ -125,7 +126,7 @@
             admin: ['KevinYuHere'],
             distractionFreeMode: false,
             id: decodeURI(window.location.pathname),
-        };
+        });
         window.$docsify = {
             count: {
                 language: 'chinese'
@@ -228,8 +229,8 @@
                             right = 0;
                         }
                         document.getElementById("year").innerHTML = year.toString();
-                        props.id = decodeURI(window.location.pathname);
-                        var gitalk = new Gitalk(props);
+                        let el = document.getElementById('gitalk-container')
+                        while(el.hasChildNodes()) el.removeChild(el.firstChild)
                         gitalk.render('gitalk-container');
                         setTimeout(function () {
                             reSetProgress();
@@ -274,7 +275,6 @@
     </script>
     <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
     <script src="//unpkg.com/docsify-count/dist/countable.min.js"></script>
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.12.2/docsify.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/search.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
