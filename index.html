@@ -218,6 +218,7 @@
                         }
                         document.getElementById("year").innerHTML = year.toString();
                         props.id = decodeURI(window.location.pathname);
+                        gitalk.render('gitalk-container');
                         setTimeout(function () {
                             reSetProgress();
                         }, 500);
