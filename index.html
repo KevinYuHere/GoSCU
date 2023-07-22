@@ -227,6 +227,9 @@
                             id: decodeURI(window.location.pathname),
                         })
                         gitalk.render('gitalk-container')
+                        setTimeout(function () {
+                            reSetProgress();
+                        }, 500);
                     });
                     hook.mounted(function () {
                         const btn = document.querySelector("button.sidebar-toggle")
