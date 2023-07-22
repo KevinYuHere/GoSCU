@@ -117,6 +117,15 @@
         var right = 0;
         var date = new Date;
         var year = date.getFullYear();
+        var props = {
+            clientID: '9bad8949906955fe8545',
+            clientSecret: '042280ae9f3934c9ae1757b904f873811404df91',
+            repo: 'GoSCU-Talk',
+            owner: 'KevinYuHere',
+            admin: ['KevinYuHere'],
+            distractionFreeMode: false,
+            id: decodeURI(window.location.pathname),
+        };
         window.$docsify = {
             count: {
                 language: 'chinese'
@@ -180,35 +189,26 @@
                         return html + footer;
                     }),
                     hook.init(function () {
-                        var props = {
-                            clientID: '9bad8949906955fe8545',
-                            clientSecret: '042280ae9f3934c9ae1757b904f873811404df91',
-                            repo: 'GoSCU-Talk',
-                            owner: 'KevinYuHere',
-                            admin: ['KevinYuHere'],
-                            distractionFreeMode: false,
-                            id: decodeURI(window.location.pathname),
-                        }
-                        var gitalk = new Gitalk(props);
-                        gitalk.render('gitalk-container');
                         window.onhashchange = function(event){
-                            let note = '#' + vm.route.path;
-                            let x = document.getElementsByClassName("at");
-                            let i;
-                            for (i = 0; i < x.length; i++) {
-                                if (x[i].href.indexOf("?id=") != -1) {
-                                    continue;
+                            setTimeout(function(){
+                                let note = '#' + vm.route.path;
+                                let x = document.getElementsByClassName("at");
+                                let i;
+                                for (i = 0; i < x.length; i++) {
+                                    if (x[i].href.indexOf("?id=") != -1) {
+                                        continue;
+                                    }
+                                    var arr = x[i].href.split("//");
+                                    var che = arr[1].substring(arr[1].indexOf("#") + 1);
+                                    document.getElementById(che).id = '_' + che;
+                                    x[i].href = note + "?id=_" + che;
+                                    x[i].setAttribute('data-id', che.replace(/#/g, ""));
+                                    x[i].className = 'anchor';
                                 }
-                                var arr = x[i].href.split("//");
-                                var che = arr[1].substring(arr[1].indexOf("#") + 1);
-                                document.getElementById(che).id = '_' + che;
-                                x[i].href = note + "?id=_" + che;
-                                x[i].setAttribute('data-id', che.replace(/#/g, ""));
-                                x[i].className = 'anchor';
-                            }
-                            if (window.location.href.indexOf("?") != -1) {
-                                history.replaceState(null, null, window.location.href.substring(0, window.location.href.indexOf("?")));
-                            }
+                                if (window.location.href.indexOf("?") != -1) {
+                                    history.replaceState(null, null, window.location.href.substring(0, window.location.href.indexOf("?")));
+                                }
+                            }, 1000);
                         }
                     });
                     hook.doneEach(function () {
@@ -229,6 +229,7 @@
                         }
                         document.getElementById("year").innerHTML = year.toString();
                         props.id = decodeURI(window.location.pathname);
+                        var gitalk = new Gitalk(props);
                         gitalk.render('gitalk-container');
                         setTimeout(function () {
                             reSetProgress();
