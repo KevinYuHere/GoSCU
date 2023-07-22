@@ -1,8 +1,6 @@
 <script>
     right=1;
 </script>
-# 川大漫游指南
-
 ## 一言
 
 > <span id="hitokoto">I see the green hills are more charming. I expect the green hills should see me like this.</span>
@@ -25,4 +23,4 @@
 >
 > 情势总是在不断变化的，因此，本资料库中的内容都仅供参考，大家不要过分依赖其中的内容。
 >
-> 想要真正的了解川大的点点滴滴，还需要大家自己去不断探索，不断体会。
+> 想要真正地了解川大的点点滴滴，还需要大家自己去不断探索，不断体会。

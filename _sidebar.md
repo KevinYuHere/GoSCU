@@ -1,8 +1,7 @@
 * **启程**
   * [主页](/)
-  * [序言](depart/foreword)
   * [协议](depart/arrangement)
-  * [日志](depart/logs)
+  * [序言](depart/foreword)
 * **入学准备**
   * [系统注册](preparations/registration)
   * [入校前准备](preparations/accommodation)
@@ -17,11 +16,11 @@
   - [学校及校区介绍](lifestyle/school)
 * **教务与学习**
   * [信息来源](study/information)
-  * [学校资源](study/resource)
+  * [可用资源](study/resource)
   * [课程及选课](study/lesson)
   * [转专业与吴玉章](study/outstanding)
   * [生涯规划](study/careers)
 * **计算机学院特别篇**
   * [学院简介](scucs/scucs)
-  * [专业简介及学习建议](scucs/study)
-  * [计算机学院的社团与学生会](scucs/organizations)
+  * [专业介绍及学习建议](scucs/study)
+  * [计算机学院的相关学生组织](scucs/organizations)
