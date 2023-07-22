@@ -220,6 +220,7 @@
                             right = 0;
                         }
                         document.getElementById("year").innerHTML = year.toString();
+                        const idurl = decodeURI(window.location.hash).split('?')[0];
                         let gitalk = new Gitalk({
                             clientID: '9bad8949906955fe8545',
                             clientSecret: '042280ae9f3934c9ae1757b904f873811404df91',
@@ -227,7 +228,7 @@
                             owner: 'KevinYuHere',
                             admin: ['KevinYuHere'],
                             distractionFreeMode: false,
-                            id: decodeURI(window.location.pathname),
+                            id: idurl,
                         });
                         let el = document.getElementById('gitalk-container')
                         while(el.hasChildNodes()) el.removeChild(el.firstChild)
