@@ -1,7 +1,8 @@
 * **启程**
   * [主页](/)
-  * [协议](depart/arrangement)
-  * [序言](depart/foreword)
+  * [许可协议](depart/arrangement)
+  * [贡献者与更新日志](depart/releases)
+  * [川大漫游指南：序言](depart/foreword)
 * **入学准备**
   * [系统注册](preparations/registration)
   * [入校前准备](preparations/accommodation)
@@ -18,7 +19,8 @@
   * [信息来源](study/information)
   * [可用资源](study/resource)
   * [课程及选课](study/lesson)
-  * [转专业与吴玉章](study/outstanding)
+  * [本科期间的提升途径](study/outstanding)
+  * [其它事项](study/others)
   * [生涯规划](study/careers)
 * **计算机学院特别篇**
   * [学院简介](scucs/scucs)

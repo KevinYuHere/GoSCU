@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Station</title>
+    <title>川大漫游指南</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/vue.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
     <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 </head>
@@ -89,6 +89,61 @@
             }
         }
     </style>-->
+    <style>
+        .gt-ico-text {
+            color: #000000;
+        }
+
+        gt-btn-text {
+            color: #ffffff;
+        }
+        .gt-container .gt-btn-preview {
+            color: var(--theme-color,#066de8);
+        }
+        .gt-container .gt-btn-login {
+            background-color: var(--theme-color,#066de8);
+            border: 1px solid var(--theme-color,#066de8);
+        }
+
+        .gt-container .gt-btn-public {
+            background-color: var(--theme-color,#066de8);
+            border: 1px solid var(--theme-color,#066de8);
+        }
+
+        .gt-container .gt-btn-public:hover {
+            background-color: var(--theme-color,#066de8);
+            border: 1px solid var(--theme-color,#066de8);
+        }
+
+        .gt-container .gt-btn {
+            border: 1px solid var(--theme-color,#066de8);
+        }
+
+        .gt-container a {
+            color: var(--theme-color,#066de8);
+        }
+
+        .gt-container .gt-btn-preview:hover {
+            border: 1px solid var(--theme-color,#066de8);
+        }
+
+        .gt-container .gt-svg svg {
+            fill: var(--theme-color,#066de8);
+        }
+
+        .gt-container .gt-comment-username {
+            color: var(--theme-color,#066de8);
+        }
+
+        gt-container .gt-popup .gt-action.is--active:before {
+            background: var(--theme-color,#066de8);
+        }
+
+        .app-name {
+            text-align: left !important;
+            margin: 0 0 0 15px !important;
+        }
+    </style>
     <div id="app">正在加载中，请稍候......</div>
     <div style="position: fixed; width: 100%; z-index: 999; height: 3px; top: 0;">
         <div id="progress-display"
@@ -97,6 +152,12 @@
     </div>
     <script>
         function reSetProgress() {
+            const idurl = decodeURI(window.location.hash).split('?')[0];
+            if(idurl === '#/')
+            {
+                document.getElementById("progress-display").style.width = '0%';
+                return;
+            }
             let totalHeight =
                 parseFloat(
                     window.getComputedStyle(document.getElementsByClassName("content")[0]).paddingTop.replace("px", "")
@@ -157,9 +218,11 @@
                 depth: 6,
                 hideOtherSidebarContent: true,
             },
+            name: '<h4 style="margin: 0">川大漫游指南</h4>',
+            nameLink: '/#/depart/foreword',
             coverpage: true,
-            onlyCover: true,
             notFoundPage: true,
+            onlyCover: true,
             auto2top: true,
             loadSidebar: true,
             executeScript: true,
@@ -206,7 +269,7 @@
                     hook.doneEach(function () {
                         if (right == 1) {
                             var xhr = new XMLHttpRequest();
-                            xhr.open('get', 'https://v1.hitokoto.cn');
+                            xhr.open('get', 'https://v1.hitokoto.cn?c=i&c=k');
                             xhr.onreadystatechange = function () {
                                 if (xhr.readyState === 4) {
                                     var data = JSON.parse(xhr.responseText);
@@ -249,41 +312,16 @@
                 }
             ],
         }
-    </script>
-    </script>
-    <script>
-        function locker(password) {
-            document.getElementById("main").style.display = "none";
-            while (1) {
-                var pass = prompt("正在尝试访问敏感文档......\n请输入密码获得权限，或者输入0以放弃查看：", "0");
-                if (pass == "0") {
-                    //document.getElementById("main").remove();
-                    document.getElementById("main").innerHTML = "<h1><span>Insufficient Permission</span></h1><p><strong><b>权限不足，访问已终止。</b></strong>如果你知道密码，请刷新页面或返回上一页面重试。如果你不知道密码，请放弃访问。</p>";
-                    history.go(-1);
-                    //window.location.href = document.referrer;
-                    break;
-                }
-                if (pass == "Key " + password) {
-                    document.getElementById("main").style.display = "";
-                    break;
-                }
-            }
-        }
-    </script>
-    <script>
         if (typeof navigator.serviceWorker !== 'undefined') {
             navigator.serviceWorker.register('sw.js')
         }
     </script>
     <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
     <script src="//unpkg.com/docsify-count/dist/countable.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.12.2/docsify.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/search.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
     <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
-    
 </body>
 
 </html>
