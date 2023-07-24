@@ -2,9 +2,21 @@
 
 [KevinYuHere](https://github.com/KevinYuHere)：主要编辑者
 
-[jzitan](https://github.com/jzitan)：校对，完成了暗色模式支持
+[jzitan](https://github.com/jzitan)：校对，暗色模式支持
 
 ## 更新日志
+
+### 0.3.3
+
+- 新增了暗色模式支持
+- 新增了回到顶部按钮
+- 调整了部分页面的显示效果
+- 我们注意到一个与响应式布局有关的bug，并已将其提交相关的开源项目处理
+
+### 0.3.2
+
+- 修复了阅读进度条在主页错误显示的问题
+- 新增了贡献者与更新日志页
 
 ### 0.3.1
 
