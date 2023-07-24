@@ -4,6 +4,8 @@
 
 [jzitan](https://github.com/jzitan)：校对，暗色模式支持
 
+子不語：提供部分图片
+
 ## 更新日志
 
 ### 0.3.3
