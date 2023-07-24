@@ -27,4 +27,6 @@
 
 > [!NOTE]
 >
+> 如果觉得有用的话，请积极转发、留下评论或者前往[Github仓库](https://github.com/KevinYuHere/GoSCU)为作者点个Star吧！
+>
 > 在这里向所有参与本项目的同学们表达深深的感谢！请[前往此处](depart/releases)查看所有贡献者和更新日志。
