@@ -30,10 +30,6 @@
             border: none;
         }
 
-        .gt-container .gt-popup .gt-action.is--active:before {
-            background: var(--theme-color,#066de8);
-        }
-
         .gt-container .gt-comment-content:hover {
             -webkit-box-shadow: 0 0.625em 3.75em -2em #0d1116;
             box-shadow: 0 0.625em 3.75em -2em #0d1116;
@@ -275,7 +271,7 @@
         }
 
         .gt-container a {
-            color: var(--theme-color,#066de8) !important;
+            color: var(--theme-color,#066de8);
         }
 
         .gt-container .gt-btn-preview:hover {
@@ -292,6 +288,10 @@
 
         gt-container .gt-popup .gt-action.is--active:before {
             background: var(--theme-color,#066de8);
+        }
+
+        body.dark-mode div.gt-popup a:not(.is--active) span {
+            color: var(--theme-color,#066de8) !important;
         }
 
         .app-name {
