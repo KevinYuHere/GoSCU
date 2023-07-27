@@ -51,6 +51,10 @@
 - [学工一体化平台](https://xsc.scu.edu.cn/userhall1?serviceurl=http://xsc.scu.edu.cn/GuidePage)（奖学金、助学金等事务的处理平台）
 - 微信公众号“四川大学微服务”（缴大小寝电费、空调电费和校园卡充值；第二课堂；请假等）
 
+### 邮箱
+
+- [四川大学学生邮件系统](http://mail.stu.scu.edu.cn/)（学生邮箱）
+
 ## 非官方资源
 
 ### 图书与文献
